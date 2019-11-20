@@ -4,14 +4,6 @@ const mockGroups = [
   {
     id: 1,
     name: 'Group Name',
-    members: [
-      {
-        id: 1,
-      },
-      {
-        id: 2,
-      },
-    ],
     avatarUrl: '',
     address: 'Address',
     number: 20,
