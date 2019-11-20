@@ -5,9 +5,6 @@ import {
   Index,
   ManyToOne,
   JoinColumn,
-  OneToMany,
-  JoinTable,
-  ManyToMany,
 } from 'typeorm';
 import { GroupEntity } from '../group/group.entity';
 

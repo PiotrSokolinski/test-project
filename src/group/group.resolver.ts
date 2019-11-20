@@ -1,12 +1,11 @@
 import {
   Resolver,
   Query,
-  Mutation,
   Args,
   ResolveProperty,
   Parent,
 } from '@nestjs/graphql';
-import { Inject, forwardRef, UseGuards } from '@nestjs/common';
+import { Inject, forwardRef } from '@nestjs/common';
 import { ID } from 'type-graphql';
 import { GroupEntity } from './group.entity';
 import { GroupDto } from './group.dto';

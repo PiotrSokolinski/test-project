@@ -12,6 +12,5 @@ export class GroupDto {
   @Field({ nullable: true }) readonly zipCode?: string;
   @Field({ nullable: true }) readonly city?: string;
   @Field({ nullable: true }) readonly country?: string;
-  // ??????
   @Field(type => [UserDto]) readonly members: UserDto[];
 }
