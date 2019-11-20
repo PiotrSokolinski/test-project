@@ -12,6 +12,7 @@ type GroupDto {
   zipCode: String
   city: String
   country: String
+  members: [UserDto!]!
 }
 
 type Query {

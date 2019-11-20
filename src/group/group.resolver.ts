@@ -8,13 +8,12 @@ import {
 } from '@nestjs/graphql';
 import { Inject, forwardRef, UseGuards } from '@nestjs/common';
 import { ID } from 'type-graphql';
-import { GroupEntity } from './group.entity';
 import { GroupDto } from './group.dto';
 import { GroupService } from './group.service';
 import { UserService } from '../user/user.service';
 import { UserDto } from '../user/user.dto';
 
-@Resolver(of => GroupEntity)
+@Resolver('groups')
 export class GroupResolver {
   constructor(
     private readonly groupService: GroupService,

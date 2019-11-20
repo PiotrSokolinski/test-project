@@ -1,18 +1,31 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { GroupEntity } from './group.entity';
-import { Repository } from 'typeorm';
-import { GroupDto } from './group.dto';
-import { UserEntity } from '../user/user.entity';
+
+const mockGroups = [
+  {
+    id: 1,
+    name: 'Group Name',
+    members: [
+      {
+        id: 1,
+      },
+      {
+        id: 2,
+      },
+    ],
+    avatarUrl: '',
+    address: 'Address',
+    number: 20,
+    zipCode: '12-123',
+    city: 'City',
+    country: 'Country',
+  },
+];
 
 @Injectable()
 export class GroupService {
-  constructor(
-    @InjectRepository(GroupEntity)
-    private readonly GroupRepository: Repository<GroupEntity>,
-  ) {}
+  constructor() {}
 
-  async findOneById(passedId: number): Promise<GroupEntity> {
-    return this.GroupRepository.findOne({ where: { id: passedId } });
+  async findOneById(passedId: number): Promise<any> {
+    return mockGroups[0];
   }
 }
